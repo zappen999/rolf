@@ -27,27 +27,27 @@ describe('Response', () => {
     });
   });
 
-  describe('Get status code', () => {
-    it('should return the status code', () => {
+  describe('Getters and setters', () => {
+    it('should get and set the status code', () => {
       const res = new Response();
-      res._statusCode = 200;
-      expect(res.getStatusCode()).to.equal(200);
+      res.status = 200;
+      expect(res.status).to.equal(200);
     });
   });
 
   describe('Get version', () => {
-    it('should return the version', () => {
+    it('should get and set the version', () => {
       const res = new Response();
-      res._version = 'RTSP/1.0';
-      expect(res.getVersion()).to.equal('RTSP/1.0');
+      res.version = 'RTSP/1.0';
+      expect(res.version).to.equal('RTSP/1.0');
     });
   });
 
   describe('Get reason phrase', () => {
-    it('should return the reason phrase', () => {
+    it('should get and set the reason phrase', () => {
       const res = new Response();
-      res._reasonPhrase = 'reason';
-      expect(res.getReasonPhrase()).to.equal('reason');
+      res.reasonPhrase = 'reason';
+      expect(res.reasonPhrase).to.equal('reason');
     });
   });
 });
