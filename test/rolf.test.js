@@ -23,4 +23,16 @@ describe('Rolf', () => {
       expect(r._buf.length).to.equal(16);
     });
   });
+
+  describe('Constructor', () => {
+    it('should set the cseq to 0 if not present', () => {
+      const r = new Rolf(null, 0, null, {test: true});
+      expect(r._cseq).to.equal(0);
+    });
+
+    it('should set the cseq from options object', () => {
+      const r = new Rolf(null, 0, null, {test: true, cseq: 12});
+      expect(r._cseq).to.equal(12);
+    });
+  });
 });
